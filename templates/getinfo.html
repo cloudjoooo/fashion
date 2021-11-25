@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<form method="POST" action="/db_search">
+    <div>
+        <label for="color">검색이름</label>
+        <input type="text" name="color">
+
+    </div>
+    <div class="'button'">
+        <button type="submit">검색</button>
+    </div>
+</form>
+    <p>
+
+        {% if closet == None %}
+            <h1>이와 같은 옷이 없습니다.</h1>
+        {% else %}
+            <h1>옷장의 {{ cnt }}개의 비슷한 옷이 있습니다.</h1>
+        {% endif %}
+        <table>
+        {% for closet in closet %}
+            <tr>
+                <td>{{ closet.id }}</td>
+                <td>{{ closet.color }}</td>
+                <td>{{ closet.clothes }}</td>
+                <td>{{ closet.red }}</td>
+                <td>{{ closet.green }}</td>
+                <td>{{ closet.blue }}</td>
+                <td>{{ closet.path }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </p>
+</div>
+
+</body>
+</html>

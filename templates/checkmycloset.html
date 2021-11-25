@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>My Closet</title>
+        <link rel="stylesheet" />
+        <style>
+        *,html{
+scroll-behavior: smooth;
+}
+*, *:after, *:before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+:root{
+scrollbar-color: rgb(210,210,210) rgb(46,54,69) !important;
+scrollbar-width: thin !important;
+}
+::-webkit-scrollbar {
+height: 12px;
+width: 8px;
+background: #000;
+}
+::-webkit-scrollbar-thumb {
+background: gray;
+-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-corner {
+background: #000;
+}
+
+/*DEFAULT*/
+body{
+margin:0;
+overflow-x:hidden;
+font-family: Oswald, sans-serif;
+}
+a{
+text-decoration:none;
+transition:0.5s;
+}
+
+/*ANIMATION*/
+@-webkit-keyframes slideIn {
+from {bottom: -300px; opacity: 0}
+to {bottom: -140px; opacity: 1}
+}
+
+@keyframes slideIn {
+from {bottom: -300px; opacity: 0}
+to {bottom: -140px; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+from {opacity: 0}
+to {opacity: 1}
+}
+
+@keyframes fadeIn {
+from {opacity: 0}
+to {opacity: 1}
+}
+
+
+
+.animate {
+-webkit-animation: animatezoom 0.6s;
+animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+from {-webkit-transform: scale(0)}
+to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+from {transform: scale(0)}
+to {transform: scale(1)}
+}
+
+
+
+
+
+header{
+width:100%;
+height:auto;
+position:relative;
+top:0;
+}
+
+.banner{
+background-color:#d99696;
+width:100%;
+padding:10px 0;
+}
+
+.banner .section-right{
+float:right;
+}
+
+.banner a{
+margin:0 10px;
+color:#000;
+}
+
+.logo{
+background:#d99696;
+color:#000;
+padding:25px;
+width:315px;
+position:absolute;
+left:-50px;
+top:30px;
+}
+
+.logo img{
+width:180px;
+height:25px;
+}
+
+.parallelogram{
+transform: skew(-20deg);
+}
+
+.skew-fix{
+width:60%;
+display:inline-block;
+transform: skew(20deg);
+}
+
+
+@media (max-width:820px){
+.banner .section-right{
+float:none;
+width:100%;
+}
+.banner .section-left{
+display:none;
+}
+}
+
+<!--.skew-fit .h2{-->
+<!--color:black;-->
+<!--font-family: 'Oswald' , sans-serif;-->
+<!--    /* font-weight  :bolder; */-->
+<!--}-->
+
+
+
+
+
+/*NAVIGATION*/
+.topnav {
+overflow: hidden;
+background-color: #212020;
+height : 83px;
+}
+
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 28px 18px;
+text-decoration: none;
+font-size: 25px;
+}
+
+.active {
+color: #d96696;
+margin-left:300px;
+}
+
+.topnav .icon {
+display: none;
+outline:none !important;
+}
+
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+.dropdown .dropbtn {
+font-size: 25px;
+border: none;
+outline: none;
+color: white;
+padding: 28px 18px;
+background-color: inherit;
+font-family: Oswald, sans-serif;
+margin: 0;
+}
+
+.dropdown-content {
+overflow:hidden;
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+border-top:2px solid #d99696;
+z-index: 1;
+-webkit-animation-name: slideIn;
+-webkit-animation-duration: 1s;
+animation-name: slideIn;
+animation-duration: 1s;
+}
+
+.dropdown-content a {
+float: none;
+color: black;
+padding: 16px 18px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+color:#d99696;
+font-weight: bolder;
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+@media screen and (max-width: 820px) {
+.dropdown-content {
+-webkit-animation-name: none;
+-webkit-animation-duration: 1s;
+animation-name: none;
+animation-duration: 1s;
+}
+
+.topnav a, .dropdown .dropbtn {
+display: none;
+}
+.topnav a.icon {
+float: right;
+display: block;
+}
+}
+
+@media screen and (max-width: 820px) {
+.active{
+margin-left:0;
+}
+.topnav{
+height:50px;
+width:100%;
+transition:0.5s;
+}
+.topnav.responsive {position: activate;height:70vh;overflow-y:auto;}
+.topnav.responsive .icon {
+position: absolute;
+right: 0;
+top: 0;
+}
+.topnav.responsive a {
+float: none;
+display: block;
+text-align: left;
+}
+.topnav.responsive .dropdown {float: none;}
+.topnav.responsive .dropdown-content {position: relative;}
+.topnav.responsive .dropdown .dropbtn {
+display: block;
+width: 100%;
+text-align: left;
+}
+}
+<!--* {-->
+<!--  box-sizing: border-box;-->
+<!--  -webkit-box-sizing: border-box;-->
+<!--}-->
+
+<!--html {-->
+
+<!--background: #bababa;-->
+<!--&lt;!&ndash;  background: url(https://res.cloudinary.com/malaika/image/upload/v1564327185/parallax-h-img-1_2.jpg) no-repeat center center fixed;&ndash;&gt;-->
+<!--  -webkit-background-size: cover;-->
+<!--  -moz-background-size: cover;-->
+<!--  -o-background-size: cover;-->
+<!--  background-size: cover;-->
+<!--}-->
+
+<!--body {-->
+<!--    margin:0px;-->
+<!--  font-family: 'Oswald', sans-serif;-->
+<!--  text-transform: uppercase;-->
+<!--  background-image: url("static/css/bg1.jpg");-->
+<!--  background-repeat: no-repeat;-->
+<!--  background-size: cover;-->
+<!--  background-size: 1550px 1350px;-->
+
+<!--}-->
+
+body {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  background-image: url("static/css/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 1320px 1160px;
+
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  -webkit-perspective: 2500px;
+  perspective: 2500px;
+  -webkit-perspective-origin: 100% 50%;
+  perspective-origin: 100% 50%;
+}
+.wrap .girl {
+  border: #fffefe 10px solid;
+  background: url("https://res.cloudinary.com/malaika/image/upload/e_grayscale/v1564579524/d7isyf5-137c7a98-d161-496f-9753-f96f530be3be_1.png") no-repeat;
+  margin-left: 0;
+  width: 450px;
+  height: 600px;
+  bottom: 0%;
+  top: 10%;
+  position: absolute;
+}
+.wrap h1 {
+  left: -5%;
+  transform: rotate(-49deg);
+  color: black;
+  font-size: 3.6em;
+  font-family: Oswald, sans-serif;
+  top: 25%;
+  position: absolute;
+}
+.wrap h1 span {
+  color: black;
+  font-weight: 1000;
+}
+.wrap .list {
+  width: 80%;
+  height: 150vh;
+  overflow-x: hidden;
+  webkit-transform: rotateX(35deg) rotateY(3deg) rotateZ(27deg);
+  transform: rotateX(35deg) rotateY(3deg) rotateZ(27deg);
+  margin: 0 0 0 200px;
+  padding: 150px 100px 500px 0;
+  scrollbar-width: none;
+}
+.wrap .list::-webkit-scrollbar {
+  display: none;
+}
+.wrap .list::-webkit-scrollbar {
+  display: none;
+}
+.wrap .list::-webkit-scrollbar {
+  display: block;
+}
+.wrap .list .item {
+/* <!--  s--> */
+  width: 30%;
+  height: 400px;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+}
+.wrap .list .item::after {
+  content: "";
+  position: absolute;
+  z-index: 150;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3960c8e1-d90e-4e60-8522-816b41b93892/d84vq6v-5985a860-c6c3-453c-a0ae-e80e5e5abf06.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM5NjBjOGUxLWQ5MGUtNGU2MC04NTIyLTgxNmI0MWI5Mzg5MlwvZDg0dnE2di01OTg1YTg2MC1jNmMzLTQ1M2MtYTBhZS1lODBlNWU1YWJmMDYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.G2ljZtN3fPs4NhvF-fCGxl_97BA4w8kvt_qGyJH1RNI");
+  opacity: 0.1;
+}
+.wrap .list .item .img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 1px 1px 50px 0 #000;
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  z-index: 10;
+  position: relative;
+}
+
+button {
+  border: 2px solid black;
+  padding: 10px;
+  z-index: 9999;
+<!--  top: -300px;-->
+  position: relative;
+  display: inline;
+  margin-left: -60px;
+  outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .girl {
+    background: url(https://res.cloudinary.com/malaika/image/upload/v1564328867/Gabriella-Wilde-PNG-HD_1_2.png) no-repeat cover fixed;
+  }
+
+h1 {
+    display: none;
+  }
+}
+
+h2 {
+margin: 0;
+  text-align: center;
+  font-family: Moderne Sans, sans-serif;
+  text-align: center;
+  font-size: 2.3rem;
+  width: 100%;
+  letter-spacing: .5rem;
+  color: white;
+}
+            header {
+            <!--  position: fixed;-->
+              width: 100%;
+              text-align: center;
+              background-color: black;
+              color: white;
+              transition: .4s;
+            }
+            header:hover {
+              background: rgba(255,255,255,0.8);
+            background: #454242;
+              font-color: white;
+            }
+            nav a {
+            font-size: 16px;
+              text-decoration: none;
+              color: inherit;
+              padding: 1rem;
+            }
+
+<!--            nav2 a {-->
+<!--            font-size: 2.8rem;-->
+<!--              text-decoration: none;-->
+<!--              color: inherit;-->
+<!--              p-->
+        </style>
+    </head>
+   <body>
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</body>
+
+<!--HEADER-->
+<header>
+<div class="banner">
+<span class="section-left">
+<a>Team 휴머니즘</a>
+<a>휴먼지능정보공학부</a>
+</span>
+</div>
+
+<div class="logo parallelogram">
+<!--<span class="skew-fix"><img src="https://i.ibb.co/zSG7rx7/logo.png" alt="LEVIOOSA"></span>-->
+    <span class="skew-fix"><h2 style="color:black; font-family: 'Oswald' , sans-serif;">FASHION</h2></span> <!-- 글씨 폰트 및 크기 수정 필요함. -->
+</div>
+
+    <div class="topnav" id="myTopnav">
+<a href="/" class="active">HOME</a>
+<div class="dropdown">
+<button class="dropbtn">옷장 관리하기
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content animate">
+<a href="/upload">등록하기</a>
+<a href="/compare">내 옷과 비교하기</a>
+<a href="/chart">내 옷장 분포</a>
+</div>  <!-- dropdown closing -->
+</div>
+<a href="/checkmycloset">내 옷장</a>
+<a href="/recommendation">추천받기</a>
+<a href="/lookbook">나의 스타일</a>
+<a href="#" title="SignIn" style="float:right;"><i class="fa fa-user"></i></a>
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</div>
+</header>
+        </div>
+
+
+        <!-- partial:index.partial.html -->
+        <div class="wrap">
+            <div class="girl"></div>
+            <h1>This is Inspired Fashion- <span>.</span></h1>
+            <div class="list">
+                {% for i in file_list %}
+                <div class="item">
+                    <img src="/static/images/{{i}}" class="img" />
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- partial -->
+    <script>
+        function myFunction() {
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+x.className += " responsive";
+} else {
+x.className = "topnav";
+}
+}
+    </script>
+    </body>
+</html>
+
+<!--
+Copyright (c) 2021 by Malaika Ishtiaq (https://codepen.io/MalaikaIshtiaq/pen/MNbXyx)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. —>

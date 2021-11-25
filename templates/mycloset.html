@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>MY CLOSET</title>
+  <link href="https://fonts.googleapis.com/css?family=Overpass:100,300,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+    body {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  background-image: url("static/css/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 1320px 660px;
+
+}
+h1 {
+margin: 0;
+  text-align: center;
+  font-family: Moderne Sans, sans-serif;
+  text-align: center;
+  font-size: 2.3rem;
+  width: 100%;
+  letter-spacing: .5rem;
+  color: white;
+}
+
+h2 {
+  font: 300 30px 'Oswald', sans-serif;
+  text-align: center;
+  font-size: 2.8rem;
+  color: #000;
+}
+
+.header-span {
+  display: block;
+  font-weight: 100;
+}
+
+hr {
+  max-width: 5em;
+  margin-bottom: 70px;
+}
+
+.all-the-foods {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: center;
+  vetical-align: bottom;
+  line-height: 200px;
+  height: 200px;
+}
+
+div.clip-path-container {
+  display: inline-block;
+  position: relative;
+  height: 280px;
+  width: 252px;
+  margin: 10px ;
+  padding: 12px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+  border-radius: 50%;
+  border-collapse: separate;
+  background-color: #222;
+}
+
+.clip-path-container:focus,
+.clip-path-container:active,
+.clip-path-container:hover {
+  border-radius: 50%;
+  outline: none;
+}
+
+.food {
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  transition: all .2s ease-in-out;
+  transform: scale(1.5);
+  outline: none;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 100%, 0 0, 52% 0, 52% 100%);
+          clip-path: polygon(0 100%, 0 0, 52% 0, 52% 100%);
+  -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+          clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+}
+
+
+.clip-path-container:hover .food {
+  -webkit-clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
+          clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
+  transform: scale(1.1);
+
+}
+
+.clip-path-container:hover .description-holder {
+  left: 20px;
+  opacity: 1;
+}
+
+.description-holder {
+  position: absolute;
+  top: 35px;
+  left: 120px;
+  height: 300px;
+  width: 100px;
+  transition: all .4s ease-in-out;
+  transition-delay: .1s;
+  opacity: 0;
+  text-align: right;
+}
+
+.description-holder h4 {
+  font-size: 20px;
+
+  margin-bottom: -8px;
+}
+
+.description-holder p {
+  max-width: 100px;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: none;
+
+}
+
+<!--.bibimbap {-->
+<!--font-family: 'Oswald', sans-serif;-->
+<!--  text-transform: uppercase;-->
+<!--  background-image: url("static/css/uicon.png");-->
+<!--  background-repeat: no-repeat;-->
+<!--&lt;!&ndash;  background-size: contain;&ndash;&gt;-->
+<!--  object-fit:cover;-->
+<!--}-->
+ .bibimbap {
+  background-image: url('https://images.pexels.com/photos/5709631/pexels-photo-5709631.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  background-position: 0 50;
+}
+
+ .pizza {
+  background-image: url('https://images.pexels.com/photos/6347515/pexels-photo-6347515.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  background-position: right center;
+  background-size : cover;
+  background-repeat : no-repeat;
+      width : 95%;
+      height : 90%;
+}
+
+
+.guacamole {
+  background-image: url('https://images.unsplash.com/photo-1516762689617-e1cffcef479d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=711&q=80');
+  background-position: right center;
+  background-size : 180px 200px;
+  background-repeat : no-repeat;
+      width : 85%;
+      height : 100%;
+}
+header {
+<!--  position: fixed;-->
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  transition: .4s;
+}
+header:hover {
+  background: rgba(255,255,255,0.8);
+background: #454242;
+  font-color: white;
+}
+nav a {
+font-size: 16px;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+}
+
+
+</style>
+</head>
+<header>
+<h1>FASHION</h1>
+  <nav>
+    <a href="/recommendation">추천받기</a>
+    <a href="/checkmycloset">내 옷장</a>
+      <a href="/lookbook">나의 스타일</a>
+  </header>
+<body>
+<!--  <h1>MY CLOSET <span class="header-span"></span></h1>-->
+<h2><p><STRONG>MY CLOSET <strong class="header-span"></strong></span></p></h2></br>
+<div class="all-the-foods">
+  <div class="clip-path-container">
+    <div class="description-holder">
+      <h4><a href="/upload_crop"><font color="#fffff">등록하기</font></a></h4>
+<!--      <p>upload your clothes</p>-->
+    </div>
+    <div class="food bibimbap"></div>
+  </div>
+
+  <div class="clip-path-container">
+    <div class="description-holder">
+      <h4><a href="/compare"><font color="#fffff">내 옷과 비교</font></a></h4>
+      <p></p>
+    </div>
+    <div class="food pizza"></div>
+  </div>
+  <div class="clip-path-container">
+    <div class="description-holder guac-holder">
+      <h4><a href="/chart"><font color="#fffff">분포</font></a></h4>
+      <p></p>
+    </div>
+    <div class="food guacamole"></div>
+  </div>
+</div>
+<!-- partial:index.partial.html -->
+<!-- partial -->
+
+</body>
+</html>
+
+
+<!--Copyright (c) 2021 by Bobby Korec (https://codepen.io/bobbykorec/pen/dNpWeW)-->
+
+<!--Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:-->
+
+<!--The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.-->
+
+<!--THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
+

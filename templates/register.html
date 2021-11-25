@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+<title>Sign up Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+	body {
+		color: #999;
+		background: #c0c0c0;
+        /* background: #f6f5f7; */
+		font-family: 'Montserrat', sans-serif;
+	}
+    .form-control {
+		border-color: #c0c0c0;
+        /* border-color: #f6f5f7; */
+        min-height: 41px;
+		box-shadow: none !important;
+	}
+    .form-control:focus {
+		border-color: #f6f5f7;
+	}
+    .form-control, .btn {        
+        border-radius: 3px;
+    }
+	.signup-form {
+		width: 500px;
+		margin: 0 auto;
+		padding: 30px 0;
+	}
+    .signup-form h2 {
+		color: #333;
+        margin: 0 0 30px 0;
+		display: inline-block;
+		padding: 5px 16px 10px 10px;
+		border-bottom: 3px solid #000000;
+    }
+    .signup-form form {
+		color: #999;
+		border-radius: 3px;
+    	margin-bottom: 15px;
+        background: #fff;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+        padding: 30px;
+    }
+	.signup-form .form-group {
+		margin-bottom: 20px;
+	}
+	.signup-form label {
+		font-weight: normal;
+		font-size: 13px;
+	}
+    .signup-form input[type="checkbox"] {
+		margin-top: 2px;
+	}
+    .signup-form .btn {        
+        font-size: 16px;
+        font-weight: bold;
+		background: #818181;
+		border: none;
+		margin-top: 20px;
+		min-width: 140px;
+        border-radius: 20px;
+        border: 1px solid #818181;
+    }
+	.signup-form .btn:hover, .signup-form .btn:focus {
+		background: #000000;
+        outline: none !important;
+	}
+    .signup-form a {
+		color: #392f31;
+		text-decoration: underline;
+	}
+	.signup-form a:hover {
+		text-decoration: none;
+	}
+    .signup-form form a {
+		color: #392f31;
+		text-decoration: none;
+	}	
+	.signup-form form a:hover {
+		text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+<div class="signup-form">
+    <form action="/register" method="post" class="form-horizontal">
+		<div class="col-xs-8 col-xs-offset-4">
+			<h2>Sign Up</h2>
+		</div>		
+        <div class="form-group">
+			<label class="control-label col-xs-4">Userid</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="userid" required="required">
+            </div>        	
+        </div>
+		<div class="form-group">
+			<label class="control-label col-xs-4">Email Address</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="email" required="required">
+            </div>        	
+        </div>
+		<div class="form-group">
+			<label class="control-label col-xs-4">Password</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="password" required="required">
+            </div>        	
+        </div>
+		<div class="form-group">
+			<label class="control-label col-xs-4">Confirm Password</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="re_password" required="required">
+            </div>        	
+        </div>
+		<div class="form-group">
+			<div class="col-xs-8 col-xs-offset-4">
+				<p><label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a>.</label></p>
+				<button type="submit" class="btn btn-primary btn-black">Sign Up</button>
+			</div>  
+		</div>		      
+    </form>
+	<div class="text-center">Already have an account? <a href="/login">Login here</a></div>
+</div>
+</body>
+</html>
+
+<!--
+Copyright (c) 2021 by Florin Pop (https://codepen.io/FlorinPop17/pen/vPKWjd)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->

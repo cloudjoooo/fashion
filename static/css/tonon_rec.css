@@ -1,0 +1,132 @@
+/*****************************/
+/* Copyright by StudioMp4 */
+/*****************************/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600);
+/* if use SSL (https://) >>> set the URL Source to https://fonts.googleapis.com/... to load google web-fonts */
+
+/* SHOWROOM CSS */
+
+* {font-family:'Open Sans', sans-serif, Segoe UI light;font-weight:100}
+html, body {margin:0px;padding:0px;width:100%;height:100%}
+
+
+/* body.light, body.light {background:#d9d9d9 url("icons/background.jpg") repeat-y center top!important} */
+
+.container {padding:50px;width:990px;margin:0 auto}
+.logo {text-align:center;width:100%}
+.logo img {text-align:center;margin:0px auto 20px auto;border:0px}
+
+h1, h2, h3 {font-weight:300;width:100%;text-align:center;color:#646464;float:left}
+h3 {color:#1787d6}
+
+.color.blue {font-weight:600;color:#1787d6;background:none!important}
+.color.grey {font-weight:600;color:#b5b5b5;background:none!important}
+.color.green {font-weight:600;color:#509b07;background:none!important}
+.color.orange {font-weight:600;color:#d18117;background:none!important}
+.color.yellow {font-weight:600;color:#c8a208;background:none!important}
+.color.red {font-weight:600;color:#d30100;background:none!important}
+.color.purple {font-weight:600;color:#9a0fb8;background:none!important}
+.color.pink {font-weight:600;color:#b4039d;background:none!important}
+
+.description {font-weight:300;font-size:20px;margin-bottom:30px;width:100%;text-align:center;color:#646464}
+
+table, .content {border-collapse:collapse;float:left;clear:both;width:100%;margin-bottom:50px;background:#fff;border:10px solid #eee;
+box-shadow:0px 1px 8px rgba(0, 0, 0, 0.3);-moz-box-shadow:0px 1px 8px rgba(0, 0, 0, 0.3);-webkit-box-shadow:0px 1px 8px rgba(0, 0, 0, 0.3)}
+
+td, th {padding:40px 20px 40px 20px;border:1px dotted #ccc;font-size:14px;text-align:center;color:#aaa}
+
+.center {margin:0 auto;width:990px}
+
+ul {margin:0px;padding:0px;list-style:none;width:330px;float:left}
+li {display:inline-block;width:100%;height:200px;padding:40px 0px 40px 0px;position:relative;overflow:hidden;border-left:1px dashed #777777}
+li.li-title {display:inline-block;width:100%;height:auto;padding:0px 0px 0px 0px;position:relative;overflow:visible;border:0px}
+li.li-title h2, li.li-title h3 {text-align:left}
+
+/* DOCUMENTATION CSS */
+
+.content-in {background:#fff;padding:20px;font-size:13px}
+
+.content-in table {border-collapse:collapse;float:left;clear:both;width:100%;margin:0px;background:#fff;border:1px solid #fff;
+box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none}
+
+.content-in td {padding:5px;border:1px dotted #ccc;font-size:13px;text-align:center;color:#000}
+
+/*td.light {background:#d9d9d9 url("icons/background.jpg") repeat-y center top;padding:20px}*/
+td.dark {background:#060606 url("icons/background-dark.gif") repeat-y center top;padding:20px}
+td.transparent {background:#d9d9d9 url("icons/background-transparent.jpg") repeat-y center top fixed;padding:20px}
+
+code {font-family:"Courier New", monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco;color:#27BB0A;font-size:12px}
+
+pre code {
+font-family:"Courier New", monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco;
+display:block;
+clear:both;
+background:#000;
+padding:20px 0px 20px 0px;
+color:#fff;
+font-size:12px;
+overflow:auto;
+line-height:16px;
+margin:0px 0px 0px 0px;
+white-space:pre;
+width:100%
+}
+
+.comp td {padding:5px}
+.yes {display:block;background:url("icons/yes.png") no-repeat center center}
+.no {display:block;background:url("icons/no.png") no-repeat center center}
+.att {display:block;background:url("icons/att.png") no-repeat center center}
+.sep {width:100%;text-align:center}
+.sep .image-hover {margin:20px 20px 20px 0px}
+
+/****** image hover ******/
+
+
+.image-hover * {-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+.image-hover {position:relative;width:450px;height:700px;display:inline-block;overflow:hidden;background:#fff;border:10px solid #fff;
+box-shadow:0px 2px 3px rgba(0, 0, 0, 0.3);-moz-box-shadow:0px 2px 3px rgba(0, 0, 0, 0.3);-webkit-box-shadow:0px 2px 3px rgba(0, 0, 0, 0.3)}
+.image-hover a {text-decoration:none}
+
+.image-hover img {margin:-100px 0px 0px -100px}
+
+/*** effect zoom in ***/
+
+.img-zoom-in img
+{
+transition:all .2s ease-in-out;
+-webkit-transition:all .2s ease-in-out;
+-moz-transition:all .2s ease-in-out;
+-ms-transition:all .2s ease-in-out;
+-o-transition:all .2s ease-in-out;
+}
+
+.img-zoom-in:hover img
+{
+transform:scale(1.1);
+-webkit-transform:scale(1.1);
+-moz-transform:scale(1.1);
+-ms-transform:scale(1.1);
+-o-transform:scale(1.1)
+}
+
+/*** effect zoom out ***/
+
+.img-zoom-out img
+{
+transition:all .2s ease-in-out;
+-webkit-transition:all .2s ease-in-out;
+-moz-transition:all .2s ease-in-out;
+-ms-transition:all .2s ease-in-out;
+-o-transition:all .2s ease-in-out;
+}
+
+.img-zoom-out:hover img
+{
+transform:scale(0.9);
+-webkit-transform:scale(0.9);
+-moz-transform:scale(0.9);
+-ms-transform:scale(0.9);
+-o-transform:scale(0.9)
+}
+
